@@ -18,7 +18,7 @@ None! Written entirely in busybox ash, uses all standard OpenWRT commands.
 
 To install or upgrade to the latest bearDropper, run:
 
-	wget -qO- http://rawgit.com/robzr/bearDropper/master/install.sh | sh
+        wget -qO- https://raw.githubusercontent.com/drieskimpe/bearDropper/master/install.sh | sh 
 
  - To modify the config options, edit the uci config file (/etc/config/bearDropper)
  - Use bearDropper -h to see options for runtime config (runtime options override uci config options)
