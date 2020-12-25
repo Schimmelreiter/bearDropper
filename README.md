@@ -1,8 +1,10 @@
 ## bearDropper 
 
-**dropbear log parsing ban agent for OpenWRT (Chaos Calmer rewrite of dropBrute.sh)** - @robzr
+**THIS IS BASED ON @robzr https://github.com/robzr/bearDropper**
 
-OpenWRT (Chaos Calmer) script for blocking repeated invalid dropbear ssh connection attempts (embedded fail2ban)
+**dropbear log parsing ban agent for OpenWRT**
+
+OpenWRT script for blocking repeated invalid dropbear ssh connection attempts (embedded fail2ban)
 
 **Status**
 
@@ -16,7 +18,7 @@ None! Written entirely in busybox ash, uses all standard OpenWRT commands.
 
 To install or upgrade to the latest bearDropper, run:
 
-	wget -qO- http://rawgit.com/robzr/bearDropper/master/install.sh | sh
+        wget -qO- https://raw.githubusercontent.com/Schimmelreiter/bearDropper/master/install.sh | sh 
 
  - To modify the config options, edit the uci config file (/etc/config/bearDropper)
  - Use bearDropper -h to see options for runtime config (runtime options override uci config options)
@@ -51,5 +53,3 @@ To install or upgrade to the latest bearDropper, run:
  - ipv6 support
 
 Also see the sister project sub2rbl for RBL based banning: https://github.com/robzr/sub2rbl
-
-Discussion of these projects at OpenWRT forums: https://forum.openwrt.org/viewtopic.php?id=62084
