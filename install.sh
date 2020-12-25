@@ -9,9 +9,9 @@ if [ -f /etc/init.d/bearDropper ] ; then
   /etc/init.d/bearDropper stop
 fi
 echo -e 'Retrieving and installing latest version'
-wget -qO /etc/init.d/bearDropper $BASE/src/init.d/bearDropper
-wget -qO /etc/config/bearDropper $BASE/src/config/bearDropper
-wget -qO /usr/sbin/bearDropper $BASE/bearDropper
+uclient-fetch -qO /etc/init.d/bearDropper $BASE/src/init.d/bearDropper
+uclient-fetch -qO /etc/config/bearDropper $BASE/src/config/bearDropper
+uclient-fetch -qO /usr/sbin/bearDropper $BASE/bearDropper
 chmod 755 /usr/sbin/bearDropper /etc/init.d/bearDropper
 
 echo -e 'Processing historical log data (this can take a while)'
