@@ -9,16 +9,16 @@ if [ -f /etc/init.d/bearDropper ] ; then
   /etc/init.d/bearDropper stop
 fi
 echo -e 'Retrieving and installing latest version'
-uclient-fetch -qO /etc/init.d/bearDropper $BASE/src/init.d/bearDropper
-uclient-fetch -qO /etc/config/bearDropper $BASE/src/config/bearDropper
-uclient-fetch -qO /usr/sbin/bearDropper $BASE/bearDropper
-chmod 755 /usr/sbin/bearDropper /etc/init.d/bearDropper
+uclient-fetch -qO /etc/init.d/beardropper $BASE/src/init.d/beardropper
+uclient-fetch -qO /etc/config/beardropper $BASE/src/config/beardropper
+uclient-fetch -qO /usr/sbin/beardropper $BASE/beardropper
+chmod 755 /usr/sbin/beardropper /etc/init.d/beardropper
 
 echo -e 'Processing historical log data (this can take a while)'
-/usr/sbin/bearDropper -m entire -f stdout
+/usr/sbin/beardropper -m entire -f stdout
 echo -e 'Starting background process'
-/etc/init.d/bearDropper enable
-/etc/init.d/bearDropper start
+/etc/init.d/beardropper enable
+/etc/init.d/beardropper start
 
 dropbear_count=$(uci show dropbear | grep -c =dropbear)
 dropbear_count=$((dropbear_count - 1))
