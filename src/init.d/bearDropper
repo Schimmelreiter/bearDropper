@@ -15,7 +15,7 @@ start() {
 }
 
 stop() {
-        PID=`cat /var/run/bearDropper.pid`
+        PID=`cat /var/run/beardropper.pid`
 	echo Stopping bearDropper $PID
 	kill `getKids $PID`
 	sleep 1
